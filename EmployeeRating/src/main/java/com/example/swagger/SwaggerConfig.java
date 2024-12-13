@@ -13,11 +13,11 @@ public class SwaggerConfig {
       // custom swagger configurations  
         return new OpenAPI()
                 .info(new Info().title("EmployeeRatingAPI")
-                        .description("EmployeeRatingAPI description")
+                        .description("EmployeeRatingAPI Endpoints information")
                         .version("1.0"))
                         .externalDocs(new ExternalDocumentation()
                         .description("Ganesh, ganesh.repalle949@gmail.com")
-                        .url("http://localhost:8080/swagger-ui.html"));
+                  );
    }
     
 }
