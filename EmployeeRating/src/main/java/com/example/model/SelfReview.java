@@ -25,6 +25,7 @@ public class SelfReview {
     @Column(nullable = false)
     private Long employeeId;
 
+    @Column(length = 5000000)
     private String reviewText;
 
     private LocalDateTime timestamp;

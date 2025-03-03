@@ -13,8 +13,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "manager_reviews")
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ManagerReview {

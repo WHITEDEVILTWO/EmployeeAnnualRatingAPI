@@ -23,7 +23,7 @@ public class PerformanceSummary {
 
     private Long employeeId;
 
-    @Column(length = 50000)
+    @Column(length = 5000000)
     private String selfReviewText;
 
     private LocalDateTime selfReviewTimestamp;

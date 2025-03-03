@@ -42,12 +42,14 @@ public class PerformanceService {
             throw new RuntimeException("Reviews not found for employee ID: " + employeeId);
         }
 //  calculating weight to managers rating scale up to 1.
-        double weight= managerReview.getRating() /5;
+      double rating =managerReview.getRating();
+        //System.out.println("Rating "+ rating);
+        double weight= rating/5;
 
         double selfReviewScore = calculateSelfReviewScore(selfReview.getReviewText());
 
-        //calculating Performance score according  the business logic
-        double performanceScore = (selfReviewScore+(managerReview.getRating()*weight))/2;
+        //calculating Performance score according  the business logic and 
+        double performanceScore = Math.min((selfReviewScore+(managerReview.getRating()*weight))/2,5);
 //
        PerformanceSummary performanceSummary = new PerformanceSummary();
         performanceSummary.setEmployeeId(employeeId);
