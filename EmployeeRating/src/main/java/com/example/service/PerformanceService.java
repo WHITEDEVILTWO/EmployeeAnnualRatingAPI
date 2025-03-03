@@ -48,7 +48,7 @@ public class PerformanceService {
 
         double selfReviewScore = calculateSelfReviewScore(selfReview.getReviewText());
 
-        //calculating Performance score according  the business logic and 
+        //calculating Performance score according  the business logic and roundit up to 5
         double performanceScore = Math.min((selfReviewScore+(managerReview.getRating()*weight))/2,5);
 //
        PerformanceSummary performanceSummary = new PerformanceSummary();
